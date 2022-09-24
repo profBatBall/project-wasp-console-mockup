@@ -1,0 +1,151 @@
+.main {
+  &__form__wrap {
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &--abscenter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__head {
+    width: 100%;
+    text-align: left !important;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #003365;
+  }
+}
+
+.form__base {
+  transition: all 0.3s ease-in-out;
+  width: 100% !important;
+
+  label {
+    font-size: 1.25rem;
+    color: #003365;
+    margin: 2rem 0 0.2rem;
+    display: block;
+    color: #003365;
+  }
+
+  input[type='text'],
+  input[type='password'],
+  button[type='submit'] {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #003365;
+    color: $color-primary-text;
+
+    &:focus {
+      border: 2px solid palevioletred;
+    }
+  }
+
+  button[type='submit'] {
+    background-color: #0080ff;
+    color: $color-white;
+    transition: all 0.1s ease-in;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: 2px solid #0080ff;
+    &:hover {
+      background-color: #0051a1;
+      border: 2px solid #0051a1;
+    }
+  }
+
+  .btn--signup {
+    background-color: #fff !important;
+    color: #003365 !important;
+    border: 2px solid #0051a1;
+  }
+}
+
+// Login Box Shadow
+
+.box {
+  width: 25%;
+  height: 100vh;
+  background: honeydew;
+  padding: 0 2rem;
+
+  @include respond(tab-port) {
+    width: 45% !important;
+  }
+  @include respond(tab-land) {
+    width: 40% !important;
+  }
+  @include respond(phone) {
+    width: 100% !important;
+  }
+}
+
+.box-shadow {
+  position: relative;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  @include respond(phone) {
+    box-shadow: none;
+  }
+}
+.box-shadow:before,
+.box-shadow:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(#004b92, 0.3);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 100px / 10px;
+
+  @include respond(phone) {
+    content: none;
+  }
+}
+.box-shadow:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg);
+}
+
+// Signup page go
+.signup {
+  &__container {
+    display: flex;
+  }
+
+  &__wrap {
+    margin-top: 1rem;
+    font-size: 1.25rem !important;
+  }
+
+  &__pagebtn--go {
+    color: $color-primary-dark;
+    cursor: pointer;
+
+    &:hover {
+      color: #00284d;
+      font-size: 1.3rem !important;
+    }
+  }
+
+  &--arrow {
+    margin: 1rem 0;
+    padding: 0.45rem;
+    color: $color-primary-dark;
+    cursor: pointer;
+  }
+}

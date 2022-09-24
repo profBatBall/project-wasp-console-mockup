@@ -1,0 +1,21 @@
+.main--title {
+  font-size: 5rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.sub--title{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.card--title {
+  font-size: 2rem;
+  color: var(--white-color);
+  font-weight: 500;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+}

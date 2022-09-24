@@ -1,0 +1,27 @@
+// New Post
+
+label {
+  color: var(--black-accent-color) !important;
+  font-size: 1.5rem !important;
+}
+
+legend {
+  color: var(--text-accent-color) !important;
+}
+
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+textarea,
+select,
+option {
+  border-color: var(--border-color);
+  background-color: var(--text-box-accent-color);
+  color: var(--text-input-color);
+  border-radius: 2px;
+}
+
+option {
+  font-size: 1.5rem;
+}
