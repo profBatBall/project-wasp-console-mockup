@@ -74,17 +74,11 @@
 // Login Box Shadow
 
 .box {
-  width: 25%;
+  width: 40rem;
   height: 100vh;
   background: honeydew;
   padding: 0 2rem;
 
-  @include respond(tab-port) {
-    width: 45% !important;
-  }
-  @include respond(tab-land) {
-    width: 40% !important;
-  }
   @include respond(phone) {
     width: 100% !important;
   }
@@ -103,7 +97,6 @@
   content: '';
   position: absolute;
   z-index: -1;
-  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 20px rgba(#004b92, 0.3);
   top: 10px;
   bottom: 10px;
