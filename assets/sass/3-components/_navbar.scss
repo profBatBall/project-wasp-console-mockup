@@ -13,7 +13,7 @@
   bottom: 5px;
   margin-left: 2.5%;
 
-  @include respond(phone) {
+  @include respond(xl-phone) {
     display: flex;
   }
 }
@@ -31,7 +31,6 @@
 .navbar ul li a {
   position: relative;
   height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
