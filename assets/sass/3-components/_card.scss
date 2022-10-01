@@ -2,41 +2,29 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: space-between;
 }
 
 .menu__item {
-  width: calc((100% - 4 * 2rem) / 5);
-  height: 13rem;
+  width: calc((100% - 5 * 1rem) / 6);
+  height: 11rem;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 0px var(--shadow-color, 0.5);
   position: relative;
 
   @include respond(tab-port) {
-    width: calc((100% - 4 * 1rem) / 5);
-    height: 11rem;
-  }
-
-  @include respond(tab-port) {
-    width: calc((100% - 4 * 1rem) / 5);
-    height: 10rem;
+    height: 9rem;
   }
 
   @include respond(phone) {
-    width: calc((100% - 4 * 1rem) / 5);
+    width: calc((100% - 1 * 1rem) / 2);
     height: 8rem;
+    margin-bottom: 1rem;
   }
 
   &:hover {
     opacity: 0.8;
     transition: all 0.3s ease-in;
-  }
-
-  &:not(:last-child) {
-    margin-right: 2rem;
-
-    @include respond(tab-port) {
-      margin-right: 1rem;
-    }
   }
 
   &--img {
@@ -45,23 +33,27 @@
     border-radius: 5px;
 
     &-1 {
-      background: url(./../../assets/img/card/published-posts.jpg) no-repeat;
+      background: url(./../../assets/img/card/published-posts.webp) no-repeat;
       background-size: cover;
     }
     &-2 {
-      background: url(./../../assets/img/card/current-affairs.jpg) no-repeat;
+      background: url(./../../assets/img/card/current-affairs.webp) no-repeat;
       background-size: cover;
     }
     &-3 {
-      background: url(./../../assets/img/card/app-controls.jpg) no-repeat;
+      background: url(./../../assets/img/card/app-controls.webp) no-repeat;
       background-size: cover;
     }
     &-4 {
-      background: url(./../../assets/img/card/administration.jpg) no-repeat;
+      background: url(./../../assets/img/card/administrator.webp) no-repeat;
       background-size: cover;
     }
     &-5 {
-      background: url(./../../assets/img/card/blog.jpg) no-repeat;
+      background: url(./../../assets/img/card/blog.webp) no-repeat;
+      background-size: cover;
+    }
+    &-6 {
+      background: url(./../../assets/img/card/constructor.webp) no-repeat;
       background-size: cover;
     }
   }
