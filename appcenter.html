@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
     <title>Console | Dashboard</title>
   </head>
   <body>
+    <!-- Sidebar Navigation -->
     <nav class="sidebar close">
       <header>
         <div class="image-text">
@@ -89,6 +95,12 @@
 
         <div class="bottom-content">
           <li>
+            <a href="#">
+              <i class="bx bx-user icon"></i>
+              <span class="text nav-text">My Account</span>
+            </a>
+          </li>
+          <li>
             <a href="#" class="logout--wrap">
               <div class="bx icon">
                 <i class="bx-log-out bx-size"></i>
@@ -117,10 +129,47 @@
         </div>
       </div>
     </nav>
+    <!-- Navbar for mobile view -->
+    <div class="navbar">
+      <ul>
+        <li class="active">
+          <a href="#">
+            <i class="bx bx-home icon"></i>
+            <i class="bx bxs-home activeIcon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pencil icon"></i>
+            <i class="bx bxs-pencil activeIcon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-folder icon"></i>
+            <i class="bx bxs-folder activeIcon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cube-alt icon"></i>
+            <i class="bx bxs-cube-alt activeIcon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user icon"></i>
+            <i class="bx bxs-user activeIcon"></i>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
 
     <section class="dashboard">
       <h1 class="main--title">App Center</h1>
 
+      <!-- Card Menus -->
       <div class="menu__wrap">
         <a href="#" class="menu__item">
           <div class="menu__item--img menu__item--img-1"></div>
@@ -150,16 +199,45 @@
 
       <div class="ui__settings">
         <div class="ui__index">
-          <h1 class="ui--title">Home Page</h1>
+          <h1 class="ui--title">Create</h1>
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Menu Name</span>
+          </label>
+          <label class="custom-field one">
+            <input type="url" placeholder="&nbsp;" />
+            <span class="placeholder">Image Source</span>
+          </label>
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Screen</span>
+          </label>
+          <label class="custom-field one">
+            <input type="url" placeholder="&nbsp;" />
+            <span class="placeholder">Collection</span>
+          </label>
+          <div class="shape__wrap">
+            <label for="shape" class="option--label">Shape: </label>
+            <select name="" id="shape">
+              <option disabled selected>Select One</option>
+              <option value="square">Square</option>
+              <option value="rectangle">Rectangle</option>
+            </select>
+          </div>
+
+          <button class="btn btn--create" type="submit">Create</button>
         </div>
         <div class="ui__index">
-          <h1 class="ui--title">Home Page</h1>
+          <h1 class="ui--title">Ative Menu</h1>
         </div>
         <div class="ui__index">
-          <h1 class="ui--title">Home Page</h1>
+          <!-- <h1 class="ui--title">Home Page</h1> -->
+        </div>
+        <div class="ui__index">
+          <!-- <h1 class="ui--title">Home Page</h1> -->
         </div>
       </div>
     </section>
   </body>
-  <script src="/assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </html>
