@@ -35,9 +35,7 @@ allLi.forEach((li, index) => {
 });
 
 // Text Effects
-
 const inputs = document.querySelectorAll('input');
-
 inputs.forEach((el) => {
   el.addEventListener('blur', (e) => {
     if (e.target.value) {
@@ -47,3 +45,48 @@ inputs.forEach((el) => {
     }
   });
 });
+
+// New Menu Overlay
+const btnNew = document.querySelector('.btn--new');
+const btnClose = document.querySelector('.btn--close');
+const frmNewMenuOverlay = document.querySelector('.menu__input--wrap');
+
+if (btnNew) {
+  btnNew.addEventListener('click', (e) => {
+    e.preventDefault();
+    frmNewMenuOverlay.classList.add('menu__input--wrap-active');
+    frmNewMenuOverlay.classList.remove('menu__input--wrap-close');
+  });
+}
+
+if (btnClose) {
+  btnClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    frmNewMenuOverlay.classList.remove('menu__input--wrap-active');
+    frmNewMenuOverlay.classList.add('menu__input--wrap-close');
+  });
+}
+
+// Delete Confirmation Overlay
+const isActiveMenuAvail = document.querySelector('.active__data');
+const deleteConfirmOverlay = document.querySelector('.delete__overlay--wrap');
+if (isActiveMenuAvail) {
+  const btnMenus = document.querySelectorAll('.menu__list--delete');
+  btnMenus.forEach((btnMenu, i) => {
+    btnMenu.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log(btnMenu);
+      deleteConfirmOverlay.classList.add('delete__overlay--wrap-active');
+      deleteConfirmOverlay.classList.remove('delete__overlay--wrap-close');
+    });
+  });
+}
+
+if (deleteConfirmOverlay) {
+  const btnCancel = document.querySelector('.btn--cancel');
+  btnCancel.addEventListener('click', (e) => {
+    e.preventDefault();
+    deleteConfirmOverlay.classList.add('delete__overlay--wrap-close');
+    deleteConfirmOverlay.classList.remove('delete__overlay--wrap-active');
+  });
+}

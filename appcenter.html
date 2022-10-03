@@ -16,6 +16,59 @@
     <title>Console | Dashboard</title>
   </head>
   <body>
+    <!-- Delete Confirmation Overlay -->
+    <div class="delete__overlay--wrap">
+      <div class="delete__overlay--center">
+        <label class="to-confirm-text" for="to-confirm-text">Type: Hello</label>
+
+        <label class="custom-field two">
+          <input type="text" placeholder="&nbsp;" />
+          <!-- <span class="placeholder">Are you sure?</span> -->
+        </label>
+
+        <div class="confirm__btn--wrap">
+          <button class="btn btn--delete" type="submit">Delete</button>
+          <button class="btn btn--cancel" type="submit">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Input -->
+    <div class="menu__input--wrap">
+      <div class="menu__input--center">
+        <div class="overlay__wrap">
+          <h1 class="ui--title overlap--title">Create</h1>
+          <span class="btn--close">X</span>
+        </div>
+        <label class="custom-field one">
+          <input type="text" placeholder="&nbsp;" />
+          <span class="placeholder">Menu Name</span>
+        </label>
+        <label class="custom-field one">
+          <input type="url" placeholder="&nbsp;" />
+          <span class="placeholder">Image Source</span>
+        </label>
+        <label class="custom-field one">
+          <input type="text" placeholder="&nbsp;" />
+          <span class="placeholder">Screen</span>
+        </label>
+        <label class="custom-field one">
+          <input type="url" placeholder="&nbsp;" />
+          <span class="placeholder">Collection</span>
+        </label>
+        <div class="shape__wrap">
+          <select name="" id="shape">
+            <option disabled selected>Select One</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="sm-rec">Small Rectangle</option>
+          </select>
+        </div>
+
+        <button class="btn btn--create" type="submit">Create</button>
+      </div>
+    </div>
+
     <!-- Sidebar Navigation -->
     <nav class="sidebar close">
       <header>
@@ -37,7 +90,7 @@
         <div class="menu">
           <ul class="menu-links">
             <li class="nav-link">
-              <a href="/pages/newpost.html">
+              <a href="/dashboard.html">
                 <div class="bx icon">
                   <i class="bx-home-alt bx-size"></i>
                 </div>
@@ -83,7 +136,7 @@
             <hr />
 
             <li class="nav-link">
-              <a href="#">
+              <a href="/appcenter.html">
                 <div class="bx icon">
                   <i class="bxl-play-store bx-size"></i>
                 </div>
@@ -129,6 +182,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Navbar for mobile view -->
     <div class="navbar">
       <ul>
@@ -202,44 +256,161 @@
         </a>
       </div>
 
-      <div class="ui__settings">
-        <div class="ui__index">
-          <h1 class="ui--title">Create</h1>
-          <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Menu Name</span>
-          </label>
-          <label class="custom-field one">
-            <input type="url" placeholder="&nbsp;" />
-            <span class="placeholder">Image Source</span>
-          </label>
-          <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Screen</span>
-          </label>
-          <label class="custom-field one">
-            <input type="url" placeholder="&nbsp;" />
-            <span class="placeholder">Collection</span>
-          </label>
-          <div class="shape__wrap">
-            <label for="shape" class="option--label">Shape: </label>
-            <select name="" id="shape">
-              <option disabled selected>Select One</option>
-              <option value="square">Square</option>
-              <option value="rectangle">Rectangle</option>
-            </select>
-          </div>
+      <!-- Active Menu Data -->
+      <div class="main__title--wrap">
+        <h1 class="main--title-x active__data--title">Active Page & Menu |</h1>
+        <button class="btn--new">New</button>
+      </div>
 
-          <button class="btn btn--create" type="submit">Create</button>
+      <div class="active__data">
+        <div class="pages__data">
+          <div class="pages__data--title sub--title">Home</div>
+          <div class="menu__list">
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ui__index">
-          <h1 class="ui--title">Ative Menu</h1>
+
+        <div class="pages__data">
+          <div class="pages__data--title sub--title">Home</div>
+          <div class="menu__list">
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ui__index">
-          <!-- <h1 class="ui--title">Home Page</h1> -->
+
+        <div class="pages__data">
+          <div class="pages__data--title sub--title">Home</div>
+          <div class="menu__list">
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ui__index">
-          <!-- <h1 class="ui--title">Home Page</h1> -->
+
+        <div class="pages__data">
+          <div class="pages__data--title sub--title">Home</div>
+          <div class="menu__list">
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="menu__list--items">
+              <span class="menu__list--name">Today's Affair</span>
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

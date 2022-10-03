@@ -1,0 +1,22 @@
+.error,
+.blog {
+  padding: 11rem 0 3rem;
+
+  &__img {
+    background-image: url(/assets/img/404-Error.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50rem;
+  }
+
+  &__msg {
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: $color-primary-dark;
+    text-align: center;
+  }
+}
+
+.blog__img {
+  background-image: url(/img/construction.svg);
+}

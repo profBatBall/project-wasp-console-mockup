@@ -32,6 +32,10 @@ $font-size-content: 2rem;
   --text-box-accent-color: #f9f9f9;
   --text-input-color: #000;
   --border-color: #695cfe;
+  --black-n-white: #000;
+  --white-n-black: #fff;
+  --primary-n-white: #695cfe;
+  --only-primary: #695cfe;
 
   //
   --gray-secondary: #b3b3b3;
@@ -62,4 +66,7 @@ body.dark {
   --text-box-accent-color: #2f2f2f;
   --text-input-color: #fff;
   --border-color: #fff;
+  --black-n-white: #fff;
+  --white-n-black: #000;
+  --primary-n-white: #fff;
 }

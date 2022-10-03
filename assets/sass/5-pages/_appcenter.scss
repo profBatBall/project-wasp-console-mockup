@@ -1,30 +1,119 @@
-.ui__settings {
-  margin-top: 2rem;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include respond(phone) {
-    display: block;
-  }
+.shape__wrap {
+  margin: 10px 0;
 }
 
-.ui {
-  &__index {
-    width: 24.5%;
-    // height: 20rem;
-    padding: 2rem 1rem;
-    background-color: var(--white-color);
-    border-radius: 3px;
-    box-shadow: 0px 0px 5px 0px rgba(#000, 0.1);
+// Button New Menu
+.main__title--wrap {
+  display: flex;
+  margin-top: 2rem;
 
-    @include respond(phone) {
-      width: 100%;
+  & > button {
+    font-size: 1.25rem;
+    padding: 0.5rem 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    background-color: var(--only-primary);
+    color: var(--white-color);
+    border-radius: 3px;
+    border: none;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      opacity: 0.9;
     }
   }
 }
 
-.shape__wrap {
-  margin: 10px 0;
+// Active Menu Data
+.active__data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+// Pages Menu
+.pages__data {
+  width: 33%;
+  padding: 1rem;
+  background-color: var(--text-box-accent-color);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+
+  @include respond(xl-phone) {
+    width: 49%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--title {
+    margin-bottom: 1rem;
+  }
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu__list {
+  &--items {
+    display: flex;
+    width: 49%;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+    background-color: var(--body-color);
+    box-shadow: 0px 0px 3px 0px rgba(#000, 0.2);
+  }
+
+  &--edit,
+  &--delete,
+  &--name {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--black-n-white);
+    opacity: 0.9;
+    cursor: context-menu;
+  }
+
+  &--name {
+    flex: 1;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  &--edit {
+    width: 15%;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: green;
+    }
+  }
+
+  &--delete {
+    width: 15%;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in;
+    border-radius: 0 3px 3px 0;
+
+    &:hover {
+      color: red;
+    }
+  }
 }

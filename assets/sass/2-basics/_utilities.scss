@@ -4,10 +4,16 @@
   font-weight: 300;
 }
 
-.sub--title {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+.main--title-x {
+  font-size: 3rem;
+  color: var(--text-color);
   font-weight: 400;
+}
+
+.sub--title {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .card--title {
@@ -23,22 +29,52 @@
 .ui--title {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .btn--create {
   padding: 1rem;
   width: 100%;
   cursor: pointer;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-only);
   border-radius: 3px;
-  background-color: var(--primary-color);
-  // font-size: 2rem;
+  background-color: var(--only-primary);
   color: var(--white-color);
   font-weight: 600;
 
   &:hover {
     opacity: 0.9;
     transition: all 0.3s ease-in;
+  }
+}
+
+.btn--delete,
+.btn--cancel {
+  width: 49.5%;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+.btn--delete {
+  background-color: red;
+  border: 2px solid red;
+
+  &:hover {
+    border: 2px solid rgb(202, 0, 0);
+    background-color: rgb(202, 0, 0);
+  }
+}
+
+.btn--cancel {
+  background-color: transparent;
+  border: 2px solid #695cfe;
+  color: var(--primary-n-white);
+
+  &:hover {
+    border-color: red;
   }
 }
