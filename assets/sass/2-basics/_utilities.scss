@@ -21,35 +21,24 @@
   color: var(--white-color);
   font-weight: 500;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     font-size: 1.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
   }
 }
 
 .ui--title {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--text-color);
-}
-
-.btn--create {
-  padding: 1rem;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid var(--primary-only);
-  border-radius: 3px;
-  background-color: var(--only-primary);
-  color: var(--white-color);
-  font-weight: 600;
-
-  &:hover {
-    opacity: 0.9;
-    transition: all 0.3s ease-in;
-  }
+  color: var(--primary-n-white);
 }
 
 .btn--delete,
-.btn--cancel {
+.btn--cancel,
+.btn--create {
   width: 49.5%;
   padding: 0.75rem 0;
   cursor: pointer;
@@ -59,22 +48,31 @@
   transition: all 0.3s ease-in;
 }
 
+.btn--create {
+  background-color: var(--only-primary);
+  border: 2px solid var(--only-primary);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 .btn--delete {
   background-color: red;
   border: 2px solid red;
 
   &:hover {
-    border: 2px solid rgb(202, 0, 0);
-    background-color: rgb(202, 0, 0);
+    opacity: 0.9;
   }
 }
 
 .btn--cancel {
   background-color: transparent;
-  border: 2px solid #695cfe;
-  color: var(--primary-n-white);
+  border: 2px solid red;
+  color: red;
 
   &:hover {
-    border-color: red;
+    background-color: red;
+    color: white;
   }
 }

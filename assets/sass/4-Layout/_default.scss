@@ -1,7 +1,7 @@
 .dashboard {
   margin-left: 88px;
   width: calc(100%-88px);
-  padding: 20px 30px 20px 30px;
+  padding: 20px;
 
   @include respond(phone) {
     width: 100%;

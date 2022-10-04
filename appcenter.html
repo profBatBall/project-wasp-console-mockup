@@ -28,7 +28,7 @@
 
         <div class="confirm__btn--wrap">
           <button class="btn btn--delete" type="submit">Delete</button>
-          <button class="btn btn--cancel" type="submit">Cancel</button>
+          <button class="btn btn--cancel" id="btnDeleteOverlay">Cancel</button>
         </div>
       </div>
     </div>
@@ -36,21 +36,21 @@
     <!-- Menu Input -->
     <div class="menu__input--wrap">
       <div class="menu__input--center">
-        <div class="overlay__wrap">
-          <h1 class="ui--title overlap--title">Create</h1>
-          <span class="btn--close">X</span>
+        <h1 class="ui--title overlap--title">New Menu</h1>
+
+        <div class="input__wrap">
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Menu Name</span>
+          </label>
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Screen</span>
+          </label>
         </div>
-        <label class="custom-field one">
-          <input type="text" placeholder="&nbsp;" />
-          <span class="placeholder">Menu Name</span>
-        </label>
         <label class="custom-field one">
           <input type="url" placeholder="&nbsp;" />
           <span class="placeholder">Image Source</span>
-        </label>
-        <label class="custom-field one">
-          <input type="text" placeholder="&nbsp;" />
-          <span class="placeholder">Screen</span>
         </label>
         <label class="custom-field one">
           <input type="url" placeholder="&nbsp;" />
@@ -65,7 +65,10 @@
           </select>
         </div>
 
-        <button class="btn btn--create" type="submit">Create</button>
+        <div class="confirm__btn--wrap">
+          <button class="btn btn--create">Create</button>
+          <button class="btn btn--cancel" id="btnNewMenuOverlay">Cancel</button>
+        </div>
       </div>
     </div>
 
@@ -221,7 +224,7 @@
     </div>
 
     <section class="dashboard">
-      <h1 class="main--title">App Center</h1>
+      <h1 class="main--title">App Control</h1>
 
       <!-- Card Menus -->
       <div class="menu__wrap">

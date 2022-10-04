@@ -32,6 +32,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
+
+  @include respond(phone) {
+    margin-bottom: 5rem;
+  }
 }
 
 // Pages Menu
@@ -56,6 +60,7 @@
 
   &--title {
     margin-bottom: 1rem;
+    color: var(--primary-n-white);
   }
 }
 

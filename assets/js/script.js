@@ -48,7 +48,7 @@ inputs.forEach((el) => {
 
 // New Menu Overlay
 const btnNew = document.querySelector('.btn--new');
-const btnClose = document.querySelector('.btn--close');
+const btnCancel = document.getElementById('btnNewMenuOverlay');
 const frmNewMenuOverlay = document.querySelector('.menu__input--wrap');
 
 if (btnNew) {
@@ -59,8 +59,8 @@ if (btnNew) {
   });
 }
 
-if (btnClose) {
-  btnClose.addEventListener('click', (e) => {
+if (btnCancel) {
+  btnCancel.addEventListener('click', (e) => {
     e.preventDefault();
     frmNewMenuOverlay.classList.remove('menu__input--wrap-active');
     frmNewMenuOverlay.classList.add('menu__input--wrap-close');
@@ -75,7 +75,6 @@ if (isActiveMenuAvail) {
   btnMenus.forEach((btnMenu, i) => {
     btnMenu.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log(btnMenu);
       deleteConfirmOverlay.classList.add('delete__overlay--wrap-active');
       deleteConfirmOverlay.classList.remove('delete__overlay--wrap-close');
     });
@@ -83,7 +82,7 @@ if (isActiveMenuAvail) {
 }
 
 if (deleteConfirmOverlay) {
-  const btnCancel = document.querySelector('.btn--cancel');
+  const btnCancel = document.getElementById('btnDeleteOverlay');
   btnCancel.addEventListener('click', (e) => {
     e.preventDefault();
     deleteConfirmOverlay.classList.add('delete__overlay--wrap-close');
