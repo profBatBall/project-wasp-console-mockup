@@ -2,6 +2,10 @@
   font-size: 5rem;
   color: var(--text-color);
   font-weight: 300;
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
 }
 
 .main--title-x {
@@ -38,7 +42,8 @@
 
 .btn--delete,
 .btn--cancel,
-.btn--create {
+.btn--create,
+.btn--update {
   width: 49.5%;
   padding: 0.75rem 0;
   cursor: pointer;
@@ -75,4 +80,18 @@
     background-color: red;
     color: white;
   }
+}
+
+.btn--update {
+  background-color: var(--only-primary);
+  border: 2px solid var(--only-primary);
+  width: 100%;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }

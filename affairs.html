@@ -12,66 +12,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
-
-    <title>Console | App Control</title>
+    <title>Console | Affairs</title>
   </head>
   <body>
-    <!-- Delete Confirmation Overlay -->
-    <div class="delete__overlay--wrap">
-      <div class="delete__overlay--center">
-        <label class="to-confirm-text" for="to-confirm-text">Type: Hello</label>
-
-        <label class="custom-field two">
-          <input type="text" placeholder="&nbsp;" />
-          <!-- <span class="placeholder">Are you sure?</span> -->
-        </label>
-
-        <div class="confirm__btn--wrap">
-          <button class="btn btn--delete" type="submit">Delete</button>
-          <button class="btn btn--cancel" id="btnDeleteOverlay">Cancel</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Input -->
-    <div class="menu__input--wrap">
-      <div class="menu__input--center">
-        <h1 class="ui--title overlap--title">New Menu</h1>
-
-        <div class="input__wrap">
+    <div class="overlay__affair--input-wrap">
+      <h1 class="main--title">Create</h1>
+      <div class="overlay__affair--flex">
+        <div class="overlay__affair--input">
           <label class="custom-field one">
             <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Menu Name</span>
+            <span class="placeholder">Question</span>
           </label>
           <label class="custom-field one">
             <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Screen</span>
+            <span class="placeholder">Answer</span>
           </label>
         </div>
-        <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" />
-          <span class="placeholder">Image Source</span>
-        </label>
-        <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" />
-          <span class="placeholder">Collection</span>
-        </label>
-        <div class="shape__wrap">
-          <select name="" id="shape">
-            <option disabled selected>Select One</option>
-            <option value="square">Square</option>
-            <option value="rectangle">Rectangle</option>
-            <option value="sm-rec">Small Rectangle</option>
-          </select>
-        </div>
-
-        <div class="confirm__btn--wrap">
-          <button class="btn btn--create">Create</button>
-          <button class="btn btn--cancel" id="btnNewMenuOverlay">Cancel</button>
-        </div>
+        <button class="overlay__affair--input-btn">Add</button>
       </div>
-    </div>
 
+      <div class="main__title--wrap">
+        <h1 class="main--title-x active__data--title">Draft |</h1>
+        <button class="btn--new">Save</button>
+      </div>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th class="t-h-7">Question</th>
+            <th class="t-h-2">Answer</th>
+            <th class="t-h-1">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="t-question-7">Who is the current President of India?</td>
+            <td class="t-answer-2">Smt. Dropadi Murmu</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit t-action-btn">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete t-action-btn">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td class="t-question-7">
+              Who is the current Prime Minister of India?
+            </td>
+            <td class="t-answer-2">Shri Narendra Modi</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <!-- Sidebar Navigation -->
     <nav class="sidebar close">
       <header>
@@ -97,7 +99,6 @@
                 <div class="bx icon">
                   <i class="bx-home-alt bx-size"></i>
                 </div>
-
                 <span class="text nav-text">Dashboard</span>
               </a>
             </li>
@@ -185,7 +186,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Navbar for mobile view -->
     <div class="navbar">
       <ul>
@@ -219,12 +219,11 @@
             <i class="bx bxs-user activeIcon"></i>
           </a>
         </li>
-        <div class="indicator"></div>
       </ul>
     </div>
 
     <section class="dashboard">
-      <h1 class="main--title">App Control</h1>
+      <h1 class="main--title">Current Affairs</h1>
 
       <!-- Card Menus -->
       <div class="menu__wrap">
@@ -259,23 +258,30 @@
         </a>
       </div>
 
-      <!-- Active Menu Data -->
       <div class="main__title--wrap">
-        <h1 class="main--title-x active__data--title">Active Page & Menu |</h1>
-        <button class="btn--new">New</button>
+        <h1 class="main--title-x active__data--title">Published Posts</h1>
       </div>
 
       <div class="active__data">
         <div class="pages__data">
           <div class="affair__head--wrap">
             <div class="affair__btn--wrap">
-              <span class="affair__data--title sub--title">Home | </span>
+              <span class="affair__data--title sub--title"
+                >Daily Current Affairs |
+              </span>
               <div class="btnNew">New</div>
             </div>
+            <select class="affair__head--option">
+              <option value="Jan">January</option>
+            </select>
           </div>
+
           <div class="menu__list">
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">21-Nov,2022</span>
+              <div class="menu__list--box">
+                <i class="bx bx-box"></i>
+              </div>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -284,7 +290,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">22-Nov,2022</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -293,7 +299,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">23-Nov,2022</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -302,7 +308,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">24-Nov,2022</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -311,7 +317,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">25-Nov,2022</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -326,14 +332,17 @@
           <div class="affair__head--wrap">
             <div class="affair__btn--wrap">
               <span class="affair__data--title sub--title"
-                >Current Affairs |
+                >Monthly Current Affairs |
               </span>
               <div class="btnNew">New</div>
             </div>
+            <select class="affair__head--option">
+              <option value="Jan">January</option>
+            </select>
           </div>
           <div class="menu__list">
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">January</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -342,7 +351,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">February</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -351,7 +360,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">March</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -371,7 +380,7 @@
           </div>
           <div class="menu__list">
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">Who is who(National)?</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -380,7 +389,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">Who is who(Internationl)?</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -389,7 +398,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">Festivals</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -403,13 +412,16 @@
         <div class="pages__data">
           <div class="affair__head--wrap">
             <div class="affair__btn--wrap">
-              <span class="affair__data--title sub--title">Computer </span>
+              <span class="affair__data--title sub--title">Computer | </span>
               <div class="btnNew">New</div>
             </div>
+            <select class="affair__head--option">
+              <option value="Jan">January</option>
+            </select>
           </div>
           <div class="menu__list">
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">Fundamental Operating System</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -418,7 +430,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">MS Windows</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>
@@ -427,7 +439,7 @@
               </div>
             </div>
             <div class="menu__list--items">
-              <span class="menu__list--name">Today's Affair</span>
+              <span class="menu__list--name">MS Word</span>
               <div class="menu__list--edit">
                 <i class="bx bx-edit"></i>
               </div>

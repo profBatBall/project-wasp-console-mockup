@@ -13,6 +13,10 @@
     padding: 2rem 1rem;
     transform: translateY(100%);
 
+    @include respond(phone) {
+      height: 100%;
+    }
+
     &-active {
       transform: translateX(0%);
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);

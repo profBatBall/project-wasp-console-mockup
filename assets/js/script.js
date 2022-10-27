@@ -25,12 +25,12 @@ allLi = document.querySelectorAll('.navbar ul li');
 
 allLi.forEach((li, index) => {
   li.addEventListener('click', (e) => {
-    e.preventDefault(); //preventing from submitting
+    // e.preventDefault(); //preventing from submitting
     navBar.querySelector('.active').classList.remove('active');
     li.classList.add('active');
 
-    const indicator = document.querySelector('.indicator');
-    indicator.style.transform = `translateX(calc(${index * 90}px))`;
+    // const indicator = document.querySelector('.indicator');
+    // indicator.style.transform = `translateX(calc(${index * 90}px))`;
   });
 });
 

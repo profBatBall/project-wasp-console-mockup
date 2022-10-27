@@ -12,9 +12,66 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
+
     <title>Console | Dashboard</title>
   </head>
   <body>
+    <!-- Delete Confirmation Overlay -->
+    <div class="delete__overlay--wrap">
+      <div class="delete__overlay--center">
+        <label class="to-confirm-text" for="to-confirm-text">Type: Hello</label>
+
+        <label class="custom-field two">
+          <input type="text" placeholder="&nbsp;" />
+          <!-- <span class="placeholder">Are you sure?</span> -->
+        </label>
+
+        <div class="confirm__btn--wrap">
+          <button class="btn btn--delete" type="submit">Delete</button>
+          <button class="btn btn--cancel" id="btnDeleteOverlay">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Input -->
+    <div class="menu__input--wrap">
+      <div class="menu__input--center">
+        <h1 class="ui--title overlap--title">New Menu</h1>
+
+        <div class="input__wrap">
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Menu Name</span>
+          </label>
+          <label class="custom-field one">
+            <input type="text" placeholder="&nbsp;" />
+            <span class="placeholder">Screen</span>
+          </label>
+        </div>
+        <label class="custom-field one">
+          <input type="url" placeholder="&nbsp;" />
+          <span class="placeholder">Image Source</span>
+        </label>
+        <label class="custom-field one">
+          <input type="url" placeholder="&nbsp;" />
+          <span class="placeholder">Collection</span>
+        </label>
+        <div class="shape__wrap">
+          <select name="" id="shape">
+            <option disabled selected>Select One</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="sm-rec">Small Rectangle</option>
+          </select>
+        </div>
+
+        <div class="confirm__btn--wrap">
+          <button class="btn btn--create">Create</button>
+          <button class="btn btn--cancel" id="btnNewMenuOverlay">Cancel</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Sidebar Navigation -->
     <nav class="sidebar close">
       <header>
@@ -128,11 +185,12 @@
         </div>
       </div>
     </nav>
+
     <!-- Navbar for mobile view -->
     <div class="navbar">
       <ul>
         <li class="active">
-          <a href="#">
+          <a href="/dashboard.html">
             <i class="bx bx-home icon"></i>
             <i class="bx bxs-home activeIcon"></i>
           </a>
@@ -150,7 +208,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/appcenter.html">
             <i class="bx bx-cube-alt icon"></i>
             <i class="bx bxs-cube-alt activeIcon"></i>
           </a>
@@ -166,39 +224,38 @@
     </div>
 
     <section class="dashboard">
-      <h1 class="main--title">Dashboard</h1>
+      <!-- <h1 class="main--title">My Account</h1> -->
 
-      <!-- Card Menus -->
-      <div class="menu__wrap">
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-1"></div>
-          <h2 class="menu__item--title card--title">UI Settings</h2>
-        </a>
+      <!-- User Data -->
+      <div class="user__data">
+        <div class="user__data--left">
+          <img src="./assets/img/user.jpg" alt="user image" srcset="" />
+        </div>
+        <div class="user__data--right">
+          <label class="custom-field two">
+            <input
+              type="text"
+              placeholder="Vicky Sharma"
+              placeholder="&nbsp;"
+            />
+          </label>
+          <label class="custom-field two">
+            <input
+              type="text"
+              placeholder="vic.vickyy@gmail.com"
+              placeholder="&nbsp;"
+            />
+          </label>
+          <label class="custom-field two">
+            <input
+              type="text"
+              placeholder="+91 8603111084"
+              placeholder="&nbsp;"
+            />
+          </label>
 
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-2"></div>
-          <h2 class="menu__item--title card--title">Current Affairs</h2>
-        </a>
-
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-3"></div>
-          <h2 class="menu__item--title card--title">App Controls</h2>
-        </a>
-
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-4"></div>
-          <h2 class="menu__item--title card--title">Adminstration</h2>
-        </a>
-
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-5"></div>
-          <h2 class="menu__item--title card--title">Blog</h2>
-        </a>
-
-        <a href="#" class="menu__item">
-          <div class="menu__item--img menu__item--img-6"></div>
-          <h2 class="menu__item--title card--title">Expo</h2>
-        </a>
+          <button class="btn btn--update mt-2">Update</button>
+        </div>
       </div>
     </section>
   </body>
