@@ -28,9 +28,6 @@ allLi.forEach((li, index) => {
     // e.preventDefault(); //preventing from submitting
     navBar.querySelector('.active').classList.remove('active');
     li.classList.add('active');
-
-    // const indicator = document.querySelector('.indicator');
-    // indicator.style.transform = `translateX(calc(${index * 90}px))`;
   });
 });
 
@@ -87,5 +84,25 @@ if (deleteConfirmOverlay) {
     e.preventDefault();
     deleteConfirmOverlay.classList.add('delete__overlay--wrap-close');
     deleteConfirmOverlay.classList.remove('delete__overlay--wrap-active');
+  });
+}
+
+// Current Affair Overlay
+const isAffairOverlayAvail = document.querySelector(
+  '.overlay__affair--input-wrap'
+);
+const isBtnNewCurrentAvail = document.querySelector(
+  '#overlay__affair--visible'
+);
+isBtnNewCurrentAvail.addEventListener('click', () => {
+  console.log('clicked');
+  isAffairOverlayAvail.classList.add('overlay__affair--visible');
+});
+
+if (isAffairOverlayAvail) {
+  const btnCloseOverlay = document.querySelector('.overlay__btn-close');
+
+  btnCloseOverlay.addEventListener('click', () => {
+    isAffairOverlayAvail.classList.remove('overlay__affair--visible');
   });
 }

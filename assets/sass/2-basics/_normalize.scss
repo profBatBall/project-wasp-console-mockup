@@ -10,6 +10,7 @@ html {
   overflow: auto;
   font-size: 62.5%; // Defines 1rem = 10px 10px/16px = 62.5%
   font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
 
   @include respond(tab-land) {
     // width < 1200?

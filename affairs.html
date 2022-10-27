@@ -15,8 +15,14 @@
     <title>Console | Affairs</title>
   </head>
   <body>
+    <!-- New Daily Affair Input -->
     <div class="overlay__affair--input-wrap">
-      <h1 class="main--title">Create</h1>
+      <div class="overlay--control">
+        <h1 class="main--title">Create</h1>
+        <div class="overlay--close overlay__btn-close">
+          <i class="bx bx-x"></i>
+        </div>
+      </div>
       <div class="overlay__affair--flex">
         <div class="overlay__affair--input">
           <label class="custom-field one">
@@ -45,6 +51,110 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td class="t-question-7">Who is the current President of India?</td>
+            <td class="t-answer-2">Smt. Dropadi Murmu</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit t-action-btn">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete t-action-btn">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td class="t-question-7">
+              Who is the current Prime Minister of India?
+            </td>
+            <td class="t-answer-2">Shri Narendra Modi</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t-question-7">Who is the current President of India?</td>
+            <td class="t-answer-2">Smt. Dropadi Murmu</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit t-action-btn">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete t-action-btn">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td class="t-question-7">
+              Who is the current Prime Minister of India?
+            </td>
+            <td class="t-answer-2">Shri Narendra Modi</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t-question-7">Who is the current President of India?</td>
+            <td class="t-answer-2">Smt. Dropadi Murmu</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit t-action-btn">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete t-action-btn">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td class="t-question-7">
+              Who is the current Prime Minister of India?
+            </td>
+            <td class="t-answer-2">Shri Narendra Modi</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t-question-7">Who is the current President of India?</td>
+            <td class="t-answer-2">Smt. Dropadi Murmu</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit t-action-btn">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete t-action-btn">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td class="t-question-7">
+              Who is the current Prime Minister of India?
+            </td>
+            <td class="t-answer-2">Shri Narendra Modi</td>
+            <td class="t-action-1">
+              <div class="menu__list--edit">
+                <i class="bx bx-edit"></i>
+              </div>
+              <div class="menu__list--delete">
+                <i class="bx bx-x"></i>
+              </div>
+            </td>
+          </tr>
           <tr>
             <td class="t-question-7">Who is the current President of India?</td>
             <td class="t-answer-2">Smt. Dropadi Murmu</td>
@@ -269,7 +379,7 @@
               <span class="affair__data--title sub--title"
                 >Daily Current Affairs |
               </span>
-              <div class="btnNew">New</div>
+              <div class="btnNew" id="overlay__affair--visible">New</div>
             </div>
             <select class="affair__head--option">
               <option value="Jan">January</option>
