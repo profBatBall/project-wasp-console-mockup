@@ -16,62 +16,6 @@
     <title>Console | Dashboard</title>
   </head>
   <body>
-    <!-- Delete Confirmation Overlay -->
-    <div class="delete__overlay--wrap">
-      <div class="delete__overlay--center">
-        <label class="to-confirm-text" for="to-confirm-text">Type: Hello</label>
-
-        <label class="custom-field two">
-          <input type="text" placeholder="&nbsp;" />
-          <!-- <span class="placeholder">Are you sure?</span> -->
-        </label>
-
-        <div class="confirm__btn--wrap">
-          <button class="btn btn--delete" type="submit">Delete</button>
-          <button class="btn btn--cancel" id="btnDeleteOverlay">Cancel</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Input -->
-    <div class="menu__input--wrap">
-      <div class="menu__input--center">
-        <h1 class="ui--title overlap--title">New Menu</h1>
-
-        <div class="input__wrap">
-          <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Menu Name</span>
-          </label>
-          <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
-            <span class="placeholder">Screen</span>
-          </label>
-        </div>
-        <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" />
-          <span class="placeholder">Image Source</span>
-        </label>
-        <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" />
-          <span class="placeholder">Collection</span>
-        </label>
-        <div class="shape__wrap">
-          <select name="" id="shape">
-            <option disabled selected>Select One</option>
-            <option value="square">Square</option>
-            <option value="rectangle">Rectangle</option>
-            <option value="sm-rec">Small Rectangle</option>
-          </select>
-        </div>
-
-        <div class="confirm__btn--wrap">
-          <button class="btn btn--create">Create</button>
-          <button class="btn btn--cancel" id="btnNewMenuOverlay">Cancel</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Sidebar Navigation -->
     <nav class="sidebar close">
       <header>
@@ -103,7 +47,7 @@
             </li>
 
             <li class="nav-link">
-              <a href="#">
+              <a href="/soon.html">
                 <div class="bx icon">
                   <i class="bx-pencil bx-size"></i>
                 </div>
@@ -113,7 +57,7 @@
             </li>
 
             <li class="nav-link">
-              <a href="#">
+              <a href="/soon.html">
                 <div class="bx icon"><i class="bx-folder bx-size"></i></div>
                 <span class="text nav-text">List View</span>
               </a>
@@ -127,7 +71,7 @@
             </li>
 
             <li class="nav-link">
-              <a href="#">
+              <a href="/soon.html">
                 <div class="bx icon">
                   <i class="bx-message-square-edit bx-size"></i>
                 </div>
@@ -151,7 +95,7 @@
 
         <div class="bottom-content">
           <li>
-            <a href="#">
+            <a href="/me.html">
               <i class="bx bx-user icon"></i>
               <span class="text nav-text">My Account</span>
             </a>
@@ -227,34 +171,40 @@
       <!-- <h1 class="main--title">My Account</h1> -->
 
       <!-- User Data -->
-      <div class="user__data">
-        <div class="user__data--left">
-          <img src="./assets/img/user.jpg" alt="user image" srcset="" />
-        </div>
-        <div class="user__data--right">
-          <label class="custom-field two">
-            <input
-              type="text"
-              placeholder="Vicky Sharma"
-              placeholder="&nbsp;"
-            />
-          </label>
-          <label class="custom-field two">
-            <input
-              type="text"
-              placeholder="vic.vickyy@gmail.com"
-              placeholder="&nbsp;"
-            />
-          </label>
-          <label class="custom-field two">
-            <input
-              type="text"
-              placeholder="+91 8603111084"
-              placeholder="&nbsp;"
-            />
-          </label>
+      <div class="user__container--wrap">
+        <div class="user__details--center">
+          <div class="user__data--display">
+            <div class="user__basic--info">
+              <img src="/assets/img/user.jpg" alt="user" />
+              <p class="user__data--name">Vicky Sharma</p>
+              <p class="user__data--designation">Admin</p>
+            </div>
+            <hr class="user__details--seperator" />
+            <p class="user__data--email">vic.vickyy@gmail.com</p>
+          </div>
+          <div class="user__input">
+            <p class="sub--title">Personal Details</p>
+            <label class="custom-field two">
+              <input type="text" placeholder="Vicky Sharma" />
+            </label>
 
-          <button class="btn btn--update mt-2">Update</button>
+            <p class="sub--title">Update Password</p>
+            <label class="custom-field two">
+              <input type="password" placeholder="Password" />
+            </label>
+            <label class="custom-field two">
+              <input type="password" placeholder="Confirm Password" />
+            </label>
+            <p class="sub--title">Contact</p>
+            <label class="custom-field two">
+              <input type="text" placeholder="vic.vickyy@gmail.com" />
+            </label>
+            <label class="custom-field two">
+              <input type="text" placeholder="860 **** 084" />
+            </label>
+
+            <button type="submit">Update</button>
+          </div>
         </div>
       </div>
     </section>

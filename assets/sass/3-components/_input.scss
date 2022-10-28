@@ -1,9 +1,9 @@
 .custom-field {
   position: relative;
-  font-size: 14px;
-  border-top: 10px solid transparent;
+  font-size: 1.4rem;
+  border-top: 1rem solid transparent;
   display: flex;
-  --field-padding: 8px;
+  --field-padding: 0.8rem;
   margin-top: 0.5rem;
 }
 
@@ -18,7 +18,7 @@
   border-radius: 3px;
   width: 100%;
   outline: none;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .custom-field .placeholder {
@@ -28,7 +28,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  top: 16px;
+  top: 1.6rem;
   line-height: 100%;
   transform: translateY(-50%);
   color: #aaa;
@@ -38,7 +38,7 @@
 .custom-field input.dirty + .placeholder,
 .custom-field input:focus + .placeholder,
 .custom-field input:not(:placeholder-shown) + .placeholder {
-  top: -12px;
+  top: -1.2rem;
   font-size: 1.25rem;
   color: #222;
 }
@@ -47,11 +47,11 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 8px;
-  font-size: 12px;
+  padding: 0 0.8rem;
+  font-size: 1.2rem;
   background: #d30909;
   color: #fff;
-  height: 24px;
+  height: 2.4rem;
 }
 
 .custom-field .error-message:empty {
@@ -66,8 +66,8 @@
 }
 
 .custom-field.one input + .placeholder {
-  left: 8px;
-  padding: 0 5px;
+  left: 0.8rem;
+  padding: 0 0.5rem;
 }
 
 .custom-field.one input.dirty,
@@ -81,9 +81,9 @@
 .custom-field.one input:not(:placeholder-shown) + .placeholder,
 .custom-field.one input:focus + .placeholder {
   top: 0;
-  font-size: 10px;
+  font-size: 1rem;
   color: #fff;
-  border-radius: 60px;
+  border-radius: 6rem;
   padding: 0.5rem 1rem;
   background: var(--primary-color);
   width: auto;
@@ -94,10 +94,16 @@
   border-radius: 0;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background: linear-gradient(90deg, #222, #222) center bottom/0 0.15em
-      no-repeat,
+  // background: linear-gradient(90deg, #222, #222) center bottom/0 0.15em
+  //     no-repeat,
+  //   linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+  //   linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  background: linear-gradient(90deg, var(--only-primary), var(--only-primary))
+      center bottom/0 0.15em no-repeat,
     linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    linear-gradient(90deg, var(--body-color), var(--body-color)) left
+      bottom/100% no-repeat;
+  color: var(--black-n-white);
   transition: background-size 0.3s ease;
 }
 
@@ -124,7 +130,7 @@
   transform: none;
   display: flex;
   align-items: center;
-  padding-left: 12px;
+  padding-left: 1.2rem;
   border-radius: 3px;
 }
 
