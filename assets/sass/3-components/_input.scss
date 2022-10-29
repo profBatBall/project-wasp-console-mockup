@@ -40,7 +40,7 @@
 .custom-field input:not(:placeholder-shown) + .placeholder {
   top: -1.2rem;
   font-size: 1.25rem;
-  color: #222;
+  color: var(--black-n-white);
 }
 
 .custom-field .error-message {
@@ -73,7 +73,7 @@
 .custom-field.one input.dirty,
 .custom-field.one input:not(:placeholder-shown),
 .custom-field.one input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--primary-n-white);
   transition-delay: 0.1s;
 }
 

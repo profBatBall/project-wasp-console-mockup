@@ -1,0 +1,65 @@
+.search--wrap {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--box-color);
+}
+
+.user {
+  &__search--wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    @include respond(phone) {
+      display: block;
+    }
+
+    & label {
+      width: 35%;
+      margin-top: -1rem;
+
+      @include respond(phone) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      & input {
+        color: var(--black-n-white);
+      }
+    }
+
+    & select {
+      width: 20%;
+      border-radius: 3px;
+      padding-left: 1rem;
+      border: 2px solid #000;
+
+      @include respond(phone) {
+        width: 100%;
+        padding: 0.75rem;
+      }
+    }
+
+    & button {
+      width: 8%;
+      border: none;
+      color: #fff;
+      border-radius: 3px;
+      background-color: var(--only-primary);
+      cursor: pointer;
+
+      @include respond(phone) {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

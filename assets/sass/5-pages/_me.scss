@@ -11,7 +11,7 @@
   }
 
   &__details--center {
-    width: 100rem;
+    width: 80rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
   }
 
   &__data--display {
-    width: 30%;
+    width: 35%;
     height: 45rem;
     padding: 2rem;
     display: flex;
@@ -80,7 +80,7 @@
 }
 
 .user__input {
-  width: 70%;
+  width: 65%;
   padding: 0 3rem;
 
   @include respond(phone) {

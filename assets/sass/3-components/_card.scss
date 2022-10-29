@@ -12,10 +12,6 @@
   box-shadow: 0px 0px 5px 0px var(--shadow-color, 0.5);
   position: relative;
 
-  &:not(:last-child) {
-    // margin-right: 1rem;
-  }
-
   @include respond(tab-port) {
     height: 8rem;
   }
