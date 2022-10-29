@@ -91,17 +91,16 @@ if (deleteConfirmOverlay) {
 const isAffairOverlayAvail = document.querySelector(
   '.overlay__affair--input-wrap'
 );
-const isBtnNewCurrentAvail = document.querySelector(
-  '#overlay__affair--visible'
-);
-isBtnNewCurrentAvail.addEventListener('click', () => {
-  console.log('clicked');
-  isAffairOverlayAvail.classList.add('overlay__affair--visible');
-});
+
+const isBtnNewCurrentAvail = document.querySelector('#new-affair');
+if (isBtnNewCurrentAvail) {
+  isBtnNewCurrentAvail.addEventListener('click', () => {
+    isAffairOverlayAvail.classList.add('overlay__affair--visible');
+  });
+}
 
 if (isAffairOverlayAvail) {
   const btnCloseOverlay = document.querySelector('.overlay__btn-close');
-
   btnCloseOverlay.addEventListener('click', () => {
     isAffairOverlayAvail.classList.remove('overlay__affair--visible');
   });

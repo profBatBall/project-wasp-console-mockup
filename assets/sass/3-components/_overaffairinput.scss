@@ -99,7 +99,7 @@
 .styled-table thead tr {
   background-color: var(--only-primary);
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   width: 100%;
 
   & > .t-h-7 {
@@ -127,6 +127,19 @@
   width: 100%;
   cursor: pointer;
 
+  & > .t-d-3 {
+    width: 30%;
+    text-align: center;
+  }
+  & > .t-d-4 {
+    width: 40%;
+    text-align: center;
+  }
+  & > .t-d-2 {
+    width: 20%;
+    text-align: center;
+  }
+
   & > .t-question-7 {
     width: 70%;
   }
@@ -149,6 +162,20 @@
 
     & .t-action-btn i {
       color: var(--only-primary);
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    & .t-action-btn:nth-of-type(1) i {
+      color: green !important;
+    }
+    & .t-action-btn:nth-of-type(2) i {
+      color: blueviolet !important;
+    }
+    & .t-action-btn:nth-of-type(3) i {
+      color: red !important;
     }
   }
 }

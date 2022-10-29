@@ -403,17 +403,15 @@ hr {
 .navbar {
   position: fixed;
   height: 50px;
-  width: 95%;
+  width: 100%;
   background: #fff;
-  border-radius: 50px;
   display: none;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 500;
-  bottom: 5px;
-  margin-left: 2.5%; }
+  bottom: 0; }
   @media (max-width: 37.5em) {
     .navbar {
       display: flex; } }
@@ -848,7 +846,7 @@ ul li a i.activeIcon {
 .styled-table thead tr {
   background-color: var(--only-primary);
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   width: 100%; }
   .styled-table thead tr > .t-h-7 {
     width: 70%; }
@@ -868,6 +866,15 @@ ul li a i.activeIcon {
 .styled-table tbody tr {
   width: 100%;
   cursor: pointer; }
+  .styled-table tbody tr > .t-d-3 {
+    width: 30%;
+    text-align: center; }
+  .styled-table tbody tr > .t-d-4 {
+    width: 40%;
+    text-align: center; }
+  .styled-table tbody tr > .t-d-2 {
+    width: 20%;
+    text-align: center; }
   .styled-table tbody tr > .t-question-7 {
     width: 70%; }
   .styled-table tbody tr > .t-answer-2 {
@@ -884,7 +891,16 @@ ul li a i.activeIcon {
       .styled-table tbody tr > .t-action-1 {
         display: none; } }
     .styled-table tbody tr > .t-action-1 .t-action-btn i {
-      color: var(--only-primary); }
+      color: var(--only-primary);
+      transition: all 0.1s ease-in; }
+      .styled-table tbody tr > .t-action-1 .t-action-btn i:hover {
+        transform: scale(1.1); }
+    .styled-table tbody tr > .t-action-1 .t-action-btn:nth-of-type(1) i {
+      color: green !important; }
+    .styled-table tbody tr > .t-action-1 .t-action-btn:nth-of-type(2) i {
+      color: blueviolet !important; }
+    .styled-table tbody tr > .t-action-1 .t-action-btn:nth-of-type(3) i {
+      color: red !important; }
 
 .styled-table th {
   padding: 1rem 1.5rem; }
@@ -1300,7 +1316,7 @@ ul li a i.activeIcon {
     width: 20%;
     border-radius: 3px;
     padding-left: 1rem;
-    border: 2px solid #000; }
+    border: 2px solid var(--black-n-white); }
     @media (max-width: 37.5em) {
       .user__search--wrap select {
         width: 100%;
