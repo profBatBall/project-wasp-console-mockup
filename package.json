@@ -1,6 +1,6 @@
 {
   "name": "admin_panel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Admin Panel & Data Entry",
   "main": "app.js",
   "scripts": {
@@ -23,5 +23,13 @@
     "node-sass": "^7.0.3"
   },
   "author": "Vicky Sharma",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profBatBall/project-wasp-console-mockup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/profBatBall/project-wasp-console-mockup/issues"
+  },
+  "homepage": "https://github.com/profBatBall/project-wasp-console-mockup#readme"
 }

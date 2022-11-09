@@ -1,4 +1,4 @@
-.delete__overlay {
+.confirm__overlay {
   &--wrap {
     display: flex;
     justify-content: center;
@@ -43,8 +43,13 @@
   }
 }
 
-.confirm__btn--wrap {
+.confirm__btn--wrap,
+.option--wrap {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.option--wrap > select {
+  width: 49.5% !important;
 }

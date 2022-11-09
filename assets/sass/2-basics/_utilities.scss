@@ -43,7 +43,8 @@
 .btn--delete,
 .btn--cancel,
 .btn--create,
-.btn--update {
+.btn--update,
+.btn-confirm {
   width: 49.5%;
   padding: 0.75rem 0;
   cursor: pointer;
@@ -73,12 +74,12 @@
 
 .btn--cancel {
   background-color: transparent;
-  border: 2px solid red;
-  color: red;
+  border: 2px solid var(--only-primary);
+  color: var(--primary-n-white);
 
   &:hover {
-    background-color: red;
-    color: white;
+    opacity: 0.9;
+    color: red;
   }
 }
 

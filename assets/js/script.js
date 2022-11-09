@@ -31,21 +31,9 @@ allLi.forEach((li, index) => {
   });
 });
 
-// Text Effects
-const inputs = document.querySelectorAll('input');
-inputs.forEach((el) => {
-  el.addEventListener('blur', (e) => {
-    if (e.target.value) {
-      e.target.classList.add('dirty');
-    } else {
-      e.target.classList.remove('dirty');
-    }
-  });
-});
-
 // New Menu Overlay
 const btnNew = document.querySelector('.btn--new');
-const btnCancel = document.getElementById('btnNewMenuOverlay');
+const btnExit = document.getElementById('btnNewMenuExit');
 const frmNewMenuOverlay = document.querySelector('.menu__input--wrap');
 
 if (btnNew) {
@@ -56,8 +44,8 @@ if (btnNew) {
   });
 }
 
-if (btnCancel) {
-  btnCancel.addEventListener('click', (e) => {
+if (btnExit) {
+  btnExit.addEventListener('click', (e) => {
     e.preventDefault();
     frmNewMenuOverlay.classList.remove('menu__input--wrap-active');
     frmNewMenuOverlay.classList.add('menu__input--wrap-close');
@@ -66,24 +54,24 @@ if (btnCancel) {
 
 // Delete Confirmation Overlay
 const isActiveMenuAvail = document.querySelector('.active__data');
-const deleteConfirmOverlay = document.querySelector('.delete__overlay--wrap');
+const ConfirmOverlay = document.querySelector('.confirm__overlay--wrap');
 if (isActiveMenuAvail) {
   const btnMenus = document.querySelectorAll('.menu__list--delete');
   btnMenus.forEach((btnMenu, i) => {
     btnMenu.addEventListener('click', (e) => {
       e.preventDefault();
-      deleteConfirmOverlay.classList.add('delete__overlay--wrap-active');
-      deleteConfirmOverlay.classList.remove('delete__overlay--wrap-close');
+      ConfirmOverlay.classList.add('confirm__overlay--wrap-active');
+      ConfirmOverlay.classList.remove('confirm__overlay--wrap-close');
     });
   });
 }
 
-if (deleteConfirmOverlay) {
-  const btnCancel = document.getElementById('btnDeleteOverlay');
+if (ConfirmOverlay) {
+  const btnCancel = document.getElementById('btnConfirmExit');
   btnCancel.addEventListener('click', (e) => {
     e.preventDefault();
-    deleteConfirmOverlay.classList.add('delete__overlay--wrap-close');
-    deleteConfirmOverlay.classList.remove('delete__overlay--wrap-active');
+    ConfirmOverlay.classList.add('confirm__overlay--wrap-close');
+    ConfirmOverlay.classList.remove('confirm__overlay--wrap-active');
   });
 }
 

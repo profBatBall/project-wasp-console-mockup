@@ -16,9 +16,9 @@
     <title>Console | App Control</title>
   </head>
   <body>
-    <!-- Delete Confirmation Overlay -->
-    <div class="delete__overlay--wrap">
-      <div class="delete__overlay--center">
+    <!-- Confirmation Overlay -->
+    <div class="confirm__overlay--wrap">
+      <form class="confirm__overlay--center">
         <label class="to-confirm-text" for="to-confirm-text">Type: Hello</label>
 
         <label class="custom-field two">
@@ -27,38 +27,49 @@
         </label>
 
         <div class="confirm__btn--wrap">
-          <button class="btn btn--delete" type="submit">Delete</button>
-          <button class="btn btn--cancel" id="btnDeleteOverlay">Cancel</button>
+          <button type="submit" class="btn btn--delete" type="submit">
+            Delete
+          </button>
+          <button type="button" class="btn btn--cancel" id="btnConfirmExit">
+            Cancel
+          </button>
         </div>
-      </div>
+      </form>
     </div>
 
     <!-- Menu Input -->
-    <div class="menu__input--wrap">
+    <form class="menu__input--wrap">
       <div class="menu__input--center">
         <h1 class="ui--title overlap--title">New Menu</h1>
 
         <div class="input__wrap">
           <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
+            <input type="text" placeholder="&nbsp;" required />
             <span class="placeholder">Menu Name</span>
           </label>
           <label class="custom-field one">
-            <input type="text" placeholder="&nbsp;" />
+            <input type="text" placeholder="&nbsp;" required />
             <span class="placeholder">Screen</span>
           </label>
         </div>
         <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" inputmode="url" />
+          <input type="url" placeholder="&nbsp;" inputmode="url" required />
           <span class="placeholder">Image Source</span>
         </label>
         <label class="custom-field one">
-          <input type="url" placeholder="&nbsp;" />
+          <input type="text" placeholder="&nbsp;" required />
           <span class="placeholder">Collection</span>
         </label>
-        <div class="shape__wrap">
-          <select name="" id="shape">
-            <option disabled selected>Select One</option>
+
+        <div class="option--wrap">
+          <select class="menu__input--option">
+            <option disabled selected>Menu For</option>
+            <option value="">Home</option>
+            <option value="">Affairs</option>
+            <option value="">GS</option>
+          </select>
+          <select class="menu__input--option">
+            <option disabled selected>Menu Size</option>
             <option value="square">Square</option>
             <option value="rectangle">Rectangle</option>
             <option value="sm-rec">Small Rectangle</option>
@@ -66,11 +77,13 @@
         </div>
 
         <div class="confirm__btn--wrap">
-          <button class="btn btn--create">Create</button>
-          <button class="btn btn--cancel" id="btnNewMenuOverlay">Cancel</button>
+          <button type="submit" class="btn btn--create">Create</button>
+          <button type="button" class="btn btn--cancel" id="btnNewMenuExit">
+            Exit
+          </button>
         </div>
       </div>
-    </div>
+    </form>
 
     <!-- Sidebar Navigation -->
     <nav class="sidebar close">
